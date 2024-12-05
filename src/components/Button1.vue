@@ -1,0 +1,24 @@
+<template>
+	<button><slot></slot></button>
+</template>
+<script></script>
+<style lang="scss" scoped>
+button {
+	background-color: inherit;
+	border-radius: 50px;
+	border: 1px solid #f53855;
+	color: #f53855;
+	padding: 13px 0;
+	width: 150px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f53855;
+		border: none;
+		color: #fff;
+		transition: 0.3s;
+	box-shadow: 0px 10px 27px rgba(245, 56, 56, 0.35);
+
+	}
+}
+</style>

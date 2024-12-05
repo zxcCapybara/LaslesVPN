@@ -1,0 +1,39 @@
+a {
+	text-decoration: none;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 45px;
+	padding-bottom: 135px;
+
+}
+
+
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.nav-item {
+	display: flex;
+	gap: 40px;
+	a:hover {
+		color: #f53838;
+	}
+}
+
+.nav-login {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	p {
+		font-weight: 500;
+	}
+
+
+}

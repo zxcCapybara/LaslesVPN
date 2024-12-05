@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+h4, h5, h6, strong {
+  color: #0B132A;
+  font-weight: 500;
+}
+
+h3 {
+  color: #0B132A;
+  font-weight: 700;
+
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+	font-family: 'Rubik', sans-serif;
+	font-optical-sizing: auto;
+	color: #4f5665;
+	font-size: 16px;
+	font-style: normal;
+	background-color: rgb(252, 252, 252);
+	
+	width: 1440px;
+	
+	margin: 0 auto;
+
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+	height: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}

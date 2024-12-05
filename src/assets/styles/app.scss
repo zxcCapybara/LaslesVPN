@@ -1,0 +1,286 @@
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+}
+
+.app {
+	background-color: rgb(252, 252, 252);
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+// main
+
+.gap-140 {
+	gap: 140px !important;
+}
+
+.mt-20 {
+	margin-top: 50px;
+}
+
+.mb-130 {
+	padding-bottom: 130px;
+}
+
+.ml-35 {
+	margin-left: 35px;
+}
+
+.main-user {
+	display: flex;
+	gap: 60px;
+}
+
+h4 {
+	font-size: 50px;
+	line-height: 1.4;
+	width: 555px;
+}
+
+h5 {
+	font-size: 35px;
+	line-height: 1.4;
+	width: 380px;
+}
+
+.main-text {
+	line-height: 1.9;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	li {
+		@include flex-center;
+		gap: 10px;
+
+		padding-bottom: 15px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		img {
+			height: 100%;
+		}
+	}
+}
+
+.main-cards {
+	margin-top: 100px;
+	@include flex-center;
+
+	justify-content: space-evenly;
+
+	background-color: #fff;
+	border-radius: 10px;
+	height: 200px;
+	margin-bottom: 120px;
+}
+
+.users,
+.locations,
+.servers {
+	display: flex;
+	gap: 35px;
+}
+
+// plan
+
+@mixin text {
+	background-color: rgb(245, 245, 245);
+	padding-left: 150px;
+	padding-right: 150px;
+
+	gap: 20px;
+
+	@include flex-center;
+
+	flex-direction: column;
+
+	justify-content: center;
+
+	h5 {
+		text-align: center;
+	}
+
+	p {
+		width: 555px;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+}
+
+.plan {
+	padding-top: 80px;
+	padding-bottom: 150px;
+	@include text;
+}
+
+.card {
+	display: flex;
+	gap: 50px;
+}
+
+// network
+
+.network {
+	@include text;
+	padding-bottom: 50px;
+	p {
+		padding-bottom: 155px;
+	}
+	img {
+		padding: 0 40px;
+	}
+}
+
+.group {
+	@include flex-center;
+	
+	gap: 47px;
+	img {
+		padding: 0;
+	}
+}
+
+.feedback {
+	@include text;
+	overflow-x: hidden;
+}
+
+.feedback-cards {
+	display: flex;
+	gap: 50px;
+	padding-right: 0;
+	padding-bottom: 60px;
+
+	padding-left: 600px;
+}
+
+.feedback-cards-btn {
+	width: 100%;
+	@include flex-center;
+	
+	justify-content: space-between;
+
+	padding-bottom: 200px;
+}
+
+.left-btn {
+	display: flex;
+	gap: 10px;
+	div {
+		width: 10px;
+		height: 10px;
+		background-color: rgb(192, 192, 192);
+		border-radius: 10px;
+	}
+
+	.active {
+		background-color: #f53838;
+		width: 30px;
+	}
+}
+
+.right-btn {
+	display: flex;
+	gap: 20px;
+
+	button {
+		width: 60px;
+		height: 60px;
+		border-radius: 60px;
+	}
+
+	.left {
+		border: 1px solid #f53838;
+		background-color: inherit;
+	}
+
+	.right {
+		background-color: #f53838;
+		border: none;
+	}
+}
+
+// footer
+
+footer {
+	height: 560px;
+	background-color: rgb(235, 235, 235);
+	padding-right: 150px;
+	padding-left: 150px;
+	position: relative;
+	display: flex;
+}
+
+.subscribe {
+	height: 230px;
+	width: 81%;
+	padding: 70px;
+	right: 50%;
+	transform: translate(50%);
+	background-color: #fff;
+	border-radius: 10px;
+	position: absolute;
+	top: calc(-230px / 2);
+	@include flex-center;
+
+	justify-content: space-between;
+
+
+	h5 {
+		width: 371px;
+	}
+}
+
+.subscribe-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+@mixin footer {
+	padding-top: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	h4 {
+		font-size: 20px;
+	}
+}
+
+.company {
+	@include footer;
+
+	p {
+		width: 340px;
+	}
+}
+
+.logo {
+	@include flex-center;
+	
+	gap: 10px;
+	
+}
+
+.social {
+	display: flex;
+}
+
+.product,
+.engage,
+.money {
+	@include footer;
+	h4 {
+		width: auto;
+	}
+}
+
+.product,
+.engage {
+	margin-right: 130px;
+}
