@@ -129,6 +129,7 @@ h5 {
 	padding-bottom: 50px;
 	p {
 		padding-bottom: 155px;
+		margin: 0;
 	}
 	img {
 		padding: 0 40px;
@@ -137,7 +138,7 @@ h5 {
 
 .group {
 	@include flex-center;
-	
+
 	gap: 47px;
 	img {
 		padding: 0;
@@ -146,25 +147,25 @@ h5 {
 
 .feedback {
 	@include text;
-	overflow-x: hidden;
+
+	// overflow-x: hidden;
 }
 
 .feedback-cards {
 	display: flex;
-	gap: 50px;
+	// gap: 50px;
 	padding-right: 0;
 	padding-bottom: 60px;
-
-	padding-left: 600px;
+	padding-left: 1600px;
 }
 
 .feedback-cards-btn {
 	width: 100%;
 	@include flex-center;
-	
+
 	justify-content: space-between;
 
-	padding-bottom: 200px;
+	padding-bottom: 60px;
 }
 
 .left-btn {
@@ -204,31 +205,16 @@ h5 {
 	}
 }
 
-// footer
-
-footer {
-	height: 560px;
-	background-color: rgb(235, 235, 235);
-	padding-right: 150px;
-	padding-left: 150px;
-	position: relative;
-	display: flex;
-}
-
 .subscribe {
 	height: 230px;
-	width: 81%;
+
 	padding: 70px;
-	right: 50%;
-	transform: translate(50%);
-	background-color: #fff;
+	background-color: rgb(245, 245, 245);
+
 	border-radius: 10px;
-	position: absolute;
-	top: calc(-230px / 2);
 	@include flex-center;
-
 	justify-content: space-between;
-
+	padding-bottom: 50px;
 
 	h5 {
 		width: 371px;
@@ -240,47 +226,13 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	gap: 20px;
-}
-
-@mixin footer {
-	padding-top: 200px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	h4 {
-		font-size: 20px;
-	}
-}
-
-.company {
-	@include footer;
-
+	h5,
 	p {
-		width: 340px;
+		text-align: start;
+		margin: 0;
 	}
 }
 
-.logo {
-	@include flex-center;
-	
-	gap: 10px;
-	
-}
-
-.social {
-	display: flex;
-}
-
-.product,
-.engage,
-.money {
-	@include footer;
-	h4 {
-		width: auto;
-	}
-}
-
-.product,
-.engage {
-	margin-right: 130px;
+.carousel {
+	background-color: rgb(245, 245, 245);
 }

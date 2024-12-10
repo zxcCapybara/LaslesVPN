@@ -1,0 +1,37 @@
+.feedback-card {
+	width: 400px;
+	height: 230px;
+	border-radius: 10px;
+	border: 2px solid #ddd;
+	padding: 30px;
+}
+
+.feedback-card__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-info {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.user-info__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.black-text {
+	margin-top: 20px;
+	color: #0b132a;
+	text-align: start;
+}

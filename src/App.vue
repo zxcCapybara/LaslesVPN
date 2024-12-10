@@ -130,114 +130,78 @@
 			These are the stories of our customers who have joined us with great
 			pleasure when using this crazy feature.
 		</p>
-		<div class="feedback-cards">
-			<Feedback></Feedback>
-			<Feedback></Feedback>
-			<Feedback></Feedback>
-			<Feedback></Feedback>
-		</div>
-		<div class="feedback-cards-btn">
-			<div class="left-btn">
-				<div class="active"></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="right-btn">
-				<button class="left">
-					<img
-						src="../src/assets/img/Button/nonact/eva_arrow-back-fill.png"
-						alt=""
-					/>
-				</button>
-				<button class="right">
-					<img
-						src="../src/assets/img/Button/act/eva_arrow-back-fill.png"
-						alt=""
-					/>
-				</button>
-			</div>
-		</div>
+	</div>
+	<div class="carousel">
+		<CarouselCard></CarouselCard>
 	</div>
 
-	<footer>
-		<div class="subscribe">
-			<div class="subscribe-text">
-				<h5>Subscribe Now for Get Special Features!</h5>
-				<p>Let's subscribe with us and find the fun.</p>
-			</div>
-			<Button2><slot>Subscribe Now</slot></Button2>
+	<div class="subscribe">
+		<div class="subscribe-text">
+			<h5>Subscribe Now for Get Special Features!</h5>
+			<p>Let's subscribe with us and find the fun.</p>
 		</div>
-		<div class="company">
-			<a href="#" class="logo">
-				<img src="./assets/Icon/logo.png" alt="logo" />
-				<h4>Lasles<strong>VPN</strong></h4>
-			</a>
-			<p>
-				<strong>LaslesVPN</strong> is a private virtual network that has unique
-				features and has high security.
-			</p>
-			<div class="social">
-				<a href="#"
-					><img src="./assets/img/Socmed/Facebook.png" alt="facebook"
-				/></a>
-				<a href="#">
-					<img src="./assets/img/Socmed/Twitter.png" alt="Twitter" />
-				</a>
-				<a href="#">
-					<img src="./assets/img/Socmed/Instagram.png" alt="Instagram" />
-				</a>
-			</div>
-			<p>©2020LaslesVPN</p>
-		</div>
-		<div class="product">
-			<h4>Product</h4>
-			<a href="#">
-				<p>Download</p> </a
-			><a href="#">
-				<p>Pricing</p> </a
-			><a href="#">
-				<p>Locations</p> </a
-			><a href="#">
-				<p>Server</p> </a
-			><a href="#">
-				<p>Countries</p> </a
-			><a href="#">
-				<p>Blog</p>
-			</a>
-		</div>
-		<div class="engage">
-			<h4>Engage</h4>
-			<a href="#">
-				<p>LaslesVPN ?</p> </a
-			><a href="#">
-				<p>FAQ</p> </a
-			><a href="#">
-				<p>Tutorials</p> </a
-			><a href="#">
-				<p>About Us</p> </a
-			><a href="#">
-				<p>Privacy Policy</p> </a
-			><a href="#">
-				<p>Terms of Service</p>
-			</a>
-		</div>
-		<div class="money">
-			<h4>Earn Money</h4>
-			<a href="#">
-				<p>Affiliate</p> </a
-			><a href="#">
-				<p>Become Partner</p>
-			</a>
-		</div>
-	</footer>
+		<Button2><slot>Subscribe Now</slot></Button2>
+	</div>
+	<Footer></Footer>
 </template>
 
 <script setup>
 import Button2 from './components/Button2.vue'
-import Feedback from './components/Feedback.vue'
+import CarouselCard from './components/Carousel.vue'
+import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import NamedSlots from './components/NamedSlots.vue'
+
+let cards = [
+	{
+		id: 1,
+		url: '../src/assets/img/user1.png',
+		name: 'Viezh Robert',
+		country: 'Warsaw, Poland',
+		rating: '4.5',
+		text: '“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”',
+	},
+	{
+		id: 2,
+		url: '../src/assets/img/user2.png',
+		name: 'Yessica Christy',
+		country: 'Shanxi, China',
+		rating: '4',
+		text: '“I like it because I like to travel far and still can connect with high speed.”',
+	},
+	{
+		id: 3,
+		url: '../src/assets/img/user3.png',
+		name: 'Kim Young Jou',
+		country: 'Seoul, South Korea',
+		rating: '3.5',
+		text: '“This is very unusual for my business that currently requires a virtual private network that has high security.”',
+	},
+	{
+		id: 4,
+		url: '../src/assets/img/user1.png',
+		name: 'Viezh Robert',
+		country: 'Warsaw, Poland',
+		rating: '4.5',
+		text: '“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”',
+	},
+	{
+		id: 5,
+		url: '../src/assets/img/user2.png',
+		name: 'Yessica Christy',
+		country: 'Shanxi, China',
+		rating: '4',
+		text: '“I like it because I like to travel far and still can connect with high speed.”',
+	},
+	{
+		id: 6,
+		url: '../src/assets/img/user3.png',
+		name: 'Kim Young Jou',
+		country: 'Seoul, South Korea',
+		rating: '3.5',
+		text: '“This is very unusual for my business that currently requires a virtual private network that has high security.”',
+	},
+]
 </script>
 
 <style lang="scss" scoped>

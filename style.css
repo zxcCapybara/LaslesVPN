@@ -1,3 +1,288 @@
+.app {
+	background-color: rgb(252, 252, 252);
+	padding-left: 150px;
+	padding-right: 150px;
+}
 
+.gap-140 {
+	gap: 140px !important;
+}
+
+.mt-20 {
+	margin-top: 50px;
+}
+
+.mb-130 {
+	padding-bottom: 130px;
+}
+
+.ml-35 {
+	margin-left: 35px;
+}
+
+.main-user {
+	display: flex;
+	gap: 60px;
+}
+
+h4 {
+	font-size: 50px;
+	line-height: 1.4;
+	width: 555px;
+}
+
+h5 {
+	font-size: 35px;
+	line-height: 1.4;
+	width: 380px;
+}
+
+.main-text {
+	line-height: 1.9;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.main-text li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-bottom: 15px;
+}
+.main-text li:last-child {
+	padding-bottom: 0;
+}
+.main-text li img {
+	height: 100%;
+}
+
+.main-cards {
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #fff;
+	border-radius: 10px;
+	height: 200px;
+	margin-bottom: 120px;
+}
+
+.users,
+.locations,
+.servers {
+	display: flex;
+	gap: 35px;
+}
+
+.plan {
+	padding-top: 80px;
+	padding-bottom: 150px;
+	background-color: rgb(245, 245, 245);
+	padding-left: 150px;
+	padding-right: 150px;
+	gap: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.plan h5 {
+	text-align: center;
+}
+.plan p {
+	width: 555px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.card {
+	display: flex;
+	gap: 50px;
+}
+
+.network {
+	background-color: rgb(245, 245, 245);
+	padding-left: 150px;
+	padding-right: 150px;
+	gap: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+.network h5 {
+	text-align: center;
+}
+.network p {
+	width: 555px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.network p {
+	padding-bottom: 155px;
+}
+.network img {
+	padding: 0 40px;
+}
+
+.group {
+	display: flex;
+	align-items: center;
+	gap: 47px;
+}
+.group img {
+	padding: 0;
+}
+
+.feedback {
+	background-color: rgb(245, 245, 245);
+	padding-left: 150px;
+	padding-right: 150px;
+	gap: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	overflow-x: hidden;
+}
+.feedback h5 {
+	text-align: center;
+}
+.feedback p {
+	width: 555px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.feedback-cards {
+	display: flex;
+	gap: 50px;
+	padding-right: 0;
+	padding-bottom: 60px;
+	padding-left: 600px;
+}
+
+.feedback-cards-btn {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 200px;
+}
+
+.left-btn {
+	display: flex;
+	gap: 10px;
+}
+.left-btn div {
+	width: 10px;
+	height: 10px;
+	background-color: rgb(192, 192, 192);
+	border-radius: 10px;
+}
+.left-btn .active {
+	background-color: #f53838;
+	width: 30px;
+}
+
+.right-btn {
+	display: flex;
+	gap: 20px;
+}
+.right-btn button {
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+}
+.right-btn .left {
+	border: 1px solid #f53838;
+	background-color: inherit;
+}
+.right-btn .right {
+	background-color: #f53838;
+	border: none;
+}
+
+footer {
+	height: 560px;
+	background-color: rgb(235, 235, 235);
+	padding-right: 150px;
+	padding-left: 150px;
+	position: relative;
+	display: flex;
+}
+
+.subscribe {
+	height: 230px;
+	width: 81%;
+	padding: 70px;
+	right: 50%;
+	transform: translate(50%);
+	background-color: #fff;
+	border-radius: 10px;
+	position: absolute;
+	top: -115px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.subscribe h5 {
+	width: 371px;
+}
+
+.subscribe-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.company {
+	padding-top: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.company h4 {
+	font-size: 20px;
+}
+.company p {
+	width: 340px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.social {
+	display: flex;
+}
+
+.product,
+.engage,
+.money {
+	padding-top: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.product h4,
+.engage h4,
+.money h4 {
+	font-size: 20px;
+}
+.product h4,
+.engage h4,
+.money h4 {
+	width: auto;
+}
+
+.product,
+.engage {
+	margin-right: 130px;
+}
 
 /*# sourceMappingURL=style.css.map */

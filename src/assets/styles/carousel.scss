@@ -1,0 +1,52 @@
+.carousel__item {
+	min-height: 200px;
+	width: 100%;
+	font-size: 20px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	display: flex;
+	justify-content: end;
+
+	margin-right: 140px;
+	gap: 20px;
+	button {
+		width: 60px;
+		height: 60px;
+		border-radius: 60px;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.prev {
+	background-color: inherit;
+	border: 1px solid #f53838 !important;
+	&:active {
+		transform: scale(1.1);
+	}
+}
+
+.next {
+	background-color: #f53838;
+	&:active {
+		transform: scale(1.1);
+	}
+}
+
+.carousel__pagination {
+	position: static;
+	margin-top: 40px !important;
+	margin-left: 140px !important;
+}
+
+.carousel__slide--active > .feedback-card {
+	border: 3px solid #f53838;
+}
+

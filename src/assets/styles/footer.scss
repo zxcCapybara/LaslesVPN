@@ -1,0 +1,58 @@
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+}
+
+
+footer {
+	height: 560px;
+	background-color: rgb(235, 235, 235);
+	padding-right: 150px;
+	padding-left: 150px;
+	display: flex;
+}
+
+
+
+@mixin footer {
+	padding-top: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	h4 {
+		font-size: 20px;
+	}
+}
+
+.company {
+	@include footer;
+	padding-right: 230px;
+
+	p {
+		width: 340px;
+	}
+}
+
+.logo {
+	@include flex-center;
+
+	gap: 10px;
+}
+
+.social {
+	display: flex;
+}
+
+.product,
+.engage,
+.money {
+	@include footer;
+	h4 {
+		width: auto;
+	}
+}
+
+.product,
+.engage {
+	margin-right: 130px;
+}
