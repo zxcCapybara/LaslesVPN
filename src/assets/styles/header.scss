@@ -35,5 +35,14 @@ nav {
 		font-weight: 500;
 	}
 
+	.btn {
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
 
 }
