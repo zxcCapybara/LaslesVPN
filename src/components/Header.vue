@@ -14,45 +14,43 @@
 			<li class="nav-item"><a href="#">Help</a></li>
 		</ul>
 		<div class="nav-login">
-			<button class="btn">
-				Sign In
-			</button>
-			<Button1 id="show-modal" @click="showModal = true"
+			<button @click="() => toggleModal('signIn')" class="btn">Sign In</button>
+
+			<Button1 @click="() => toggleModal('signUp')"
 				><slot>Sign Up</slot></Button1
 			>
-			<Teleport to="body">
-				<!-- используйте модальный компонент, передайте входной параметр -->
-				<modal
-					:class="{ hidden: showModal }"
-					:show="showModal"
-					@close="showModal = false"
-				>
-
-				</modal>
-			</Teleport>
+			<Modal
+				v-if="modalTrigger.signIn"
+				:toggleModal="() => toggleModal('signIn')"
+			>
+				<ValidationSignIn></ValidationSignIn>
+			</Modal>
+			<Modal
+				v-if="modalTrigger.signUp"
+				:toggleModal="() => toggleModal('signUp')"
+			>
+				<Validation></Validation>
+			</Modal>
 		</div>
 	</nav>
 </template>
 <script setup>
 import Button1 from '../components/Button1.vue'
+import Modal from './Modal.vue'
+import Validation from './Validation.vue'
+import ValidationSignIn from './ValidationSignIn.vue'
 
 import { ref, watch } from 'vue'
-import Modal from './Modal.vue'
 
-const showModal = ref(false)
-const activeId = ref(null)
+const modalTrigger = ref({
+  signUp: false,
+  signIn: false,
+})
 
-const bodyClassList = document.body.classList
+const toggleModal = (trigger) => {
+  modalTrigger.value[trigger] = !modalTrigger.value[trigger]
+}
 
-watch(
-	[showModal, activeId],
-	newValues => {
-		const [isVisible, id] = newValues
-
-		bodyClassList.toggle('no-overflow', isVisible || id)
-	},
-	{ immediate: true }
-)
 </script>
 <style lang="scss">
 @import '../assets/styles/header.scss';

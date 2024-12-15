@@ -1,56 +1,52 @@
 <script setup>
-import Validation from './Validation.vue'
-const props = defineProps({
-	show: Boolean,
-})
+defineProps(['toggleModal'])
 </script>
 
 <template>
-	<Transition name="modal">
-		<div v-if="show" class="modal-mask">
-			<Validation>
-				<template #close>
-					<button class="btnClose" @click="$emit('close')">X</button>
-				</template>
-			</Validation>
+	<div class="modal">
+		<div class="modal-inner">
+			<slot />
+			<button class="modal-close" @click="toggleModal()">X</button>
 		</div>
-	</Transition>
+	</div>
 </template>
 
 <style lang="scss">
-.modal-mask {
+.modal {
 	position: fixed;
-	z-index: 9998;
 	top: 0;
+	bottom: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	right: 0;
+	z-index: 99;
+	background-color: rgba(0, 0, 0, 0.2);
 	display: flex;
-	transition: opacity 0.3s ease;
-}
+	align-items: center;
+	justify-content: center;
 
-.modal-enter-from {
-	opacity: 0;
-}
+	.modal-inner {
+		background-color: #fff;
+		width: 90vw;
+		height: 95vh;
+		border-radius: 10px;
+		position: relative;
+	}
 
-.modal-leave-to {
-	opacity: 0;
-}
-
-.modal-enter-from .modal-container,
-.modal-leave-to .modal-container {
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.btnClose {
-	border: none;
-	width: 40px;
-	height: 40px;
-	border-radius: 10px;
-	&:hover {
-		background-color: #f53838;
+	.modal-close {
+		position: absolute;
+		border: none;
+		top: 40px;
+		right: 40px;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #f53838;
+		background-color: #fff;
+		border-radius: 5px;
+		&:hover {
+			background-color: #f53838;
+			color: #fff;
+			transition: .3s;
+		}
 	}
 }
 </style>

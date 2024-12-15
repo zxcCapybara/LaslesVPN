@@ -2,22 +2,6 @@
 	<main>
 		<div class="container">
 			<div class="field">
-				<label class="label">Имя</label>
-				<div class="control">
-					<input
-						v-model="form.name"
-						@focus="v.$reset()"
-						:class="{ 'is-danger': !!validate({ prop: 'name' }) }"
-						class="input"
-						type="text"
-					/>
-					<p v-if="!!validate({ prop: 'name' })">
-						{{ validate({ prop: 'name' }) }}
-					</p>
-				</div>
-			</div>
-
-			<div class="field">
 				<label class="label">Почта</label>
 				<div class="control">
 					<input
@@ -29,40 +13,6 @@
 					/>
 					<p v-if="!!validate({ prop: 'email' })">
 						{{ validate({ prop: 'email' }) }}
-					</p>
-				</div>
-			</div>
-
-			<div class="field">
-				<label class="label">Номер телефона</label>
-				<div class="control">
-					<input
-						v-model="form.phone"
-						@focus="v.$reset()"
-						:class="{ 'is-danger': !!validate({ prop: 'phone' }) }"
-						v-maska
-						:data-maska="'+7 (###) - ### - ## - ##'"
-						class="input"
-						type="tel"
-					/>
-					<p v-if="!!validate({ prop: 'phone' })">
-						{{ validate({ prop: 'phone' }) }}
-					</p>
-				</div>
-			</div>
-
-			<div class="field">
-				<label class="label">Сообщение</label>
-				<div class="control">
-					<textarea
-						v-model="form.textarea"
-						@focus="v.$reset()"
-						:class="{ 'is-danger': !!validate({ prop: 'textarea' }) }"
-						class="textarea"
-						type="text"
-					/>
-					<p v-if="!!validate({ prop: 'textarea' })">
-						{{ validate({ prop: 'textarea' }) }}
 					</p>
 				</div>
 			</div>
@@ -83,38 +33,6 @@
 				</div>
 			</div>
 
-			<div class="field">
-				<label class="label">Повторите пароль</label>
-				<div class="control">
-					<input
-						v-model="form.currentPassword"
-						@focus="v.$reset()"
-						:class="{ 'is-danger': !!validate({ prop: 'currentPassword' }) }"
-						class="input"
-						type="password"
-					/>
-					<p v-if="!!validate({ prop: 'currentPassword' })">
-						{{ validate({ prop: 'currentPassword' }) }}
-					</p>
-				</div>
-			</div>
-
-			<div class="field">
-				<label
-					class="label"
-					:class="{ 'is-danger-label': !!validate({ prop: 'checkbox' }) }"
-				>
-					<div class="control usn">
-						<input
-							v-model="form.checkbox"
-							@focus="v.$reset()"
-							type="checkbox"
-						/>
-						Я соглашаюсь с
-						<a href="#">правилами сообщества </a>
-					</div>
-				</label>
-			</div>
 			<div class="control">
 				<button
 					:disabled="form.pending"
@@ -123,7 +41,6 @@
 					@click="onSubmit"
 				>
 					<span>Отправить</span>
-					
 				</button>
 			</div>
 		</div>
@@ -135,8 +52,6 @@ import {
 	maxLength,
 	minLength,
 	required,
-	requiredPhone,
-	sameAs,
 } from '../assets/utils/i18n-validators.js'
 
 import useValidate from '@vuelidate/core'
@@ -148,48 +63,25 @@ export default {
 		// data
 
 		const form = reactive({
-			name: null,
 			email: null,
-			phone: null,
-			textarea: null,
+
 			password: null,
-			currentPassword: null,
-			checkbox: null,
+
 			pending: null,
 		})
 
 		// computed
 
 		const rules = computed(() => ({
-			name: {
-				required,
-			},
 			email: {
 				required,
 				email,
 			},
-			phone: {
-				required,
-				requiredPhone: requiredPhone(24),
-			},
-			textarea: {
-				required,
-				minLength: minLength(5),
-			},
+
 			password: {
 				required,
 				minLength: minLength(5),
 				maxLength: maxLength(25),
-			},
-			currentPassword: {
-				required,
-				minLength: minLength(5),
-				maxLength: maxLength(25),
-				sameAs: sameAs(form.password),
-			},
-			checkbox: {
-				required,
-				sameAs: sameAs(true),
 			},
 		}))
 
@@ -205,13 +97,8 @@ export default {
 
 				try {
 					const payload = {
-						name: form.name,
 						email: form.email,
-						phone: form.phone,
-						textarea: form.textarea,
 						password: form.password,
-						currentPassword: form.currentPassword,
-						checkbox: form.checkbox,
 					}
 
 					setTimeout(() => {
@@ -253,19 +140,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 main {
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-
 }
 
 .container {
-	
 	border-radius: 40px;
 	padding: 40px;
 	display: flex;
@@ -280,7 +163,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
 .control {
